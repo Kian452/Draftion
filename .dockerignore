@@ -1,0 +1,10 @@
+.git
+.gitignore
+.env
+.claude
+.venv-compat
+data
+__pycache__
+*.pyc
+*.pdf
+README.md

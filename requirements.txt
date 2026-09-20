@@ -1,0 +1,20 @@
+requests>=2.31
+python-dotenv>=1.0
+
+# Compiled scientific stack, pinned to older, widely-used releases on purpose:
+# on Windows with Smart App Control enabled, the newest releases (scikit-learn
+# 1.9, scipy 1.18, numpy 2.5, ...) have no reputation yet and their .pyd/.dll
+# files get blocked ("An Application Control policy has blocked this file"),
+# so the server can't even import. These versions are tested with this repo.
+pandas==2.2.3
+numpy==2.2.6
+scipy==1.15.3
+scikit-learn==1.6.1   # >=1.6 needed for sklearn.frozen.FrozenEstimator (model calibration)
+joblib==1.4.2
+lightgbm==4.6.0       # optional gradient-boosting backend; logreg backend works without it
+
+# Backend (Abschnitt 10). Plain uvicorn on purpose: the [standard] extras only add
+# compiled speedups (httptools, watchfiles) that this app doesn't need.
+fastapi>=0.110
+uvicorn>=0.29
+httpx>=0.27  # used by fastapi.testclient in src/synthetic.py's smoke test

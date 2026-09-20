@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Draftion &ndash; Brawl Stars Ranked Drafting Tool</title>
+<meta name="description" content="Draftion is a Brawl Stars Ranked drafting tool by Kian Gray.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 28 28'%3E%3Crect width='28' height='28' rx='6' fill='%23f2b705'/%3E%3Cpath d='M9 7.5h5.2a6.5 6.5 0 0 1 0 13H9z' fill='none' stroke='%2314110a' stroke-width='2.6' stroke-linejoin='round'/%3E%3C/svg%3E">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Home: start a new draft (first pick + map). Changing either later means
+       starting a new draft. -->
+  <section id="map-screen" class="screen home">
+    <div class="home-wrap">
+
+      <header class="hero">
+        <svg class="brand-mark" viewBox="0 0 28 28" aria-hidden="true">
+          <rect width="28" height="28" rx="6" fill="currentColor"/>
+          <path d="M9 7.5h5.2a6.5 6.5 0 0 1 0 13H9z" fill="none" stroke="#14110a" stroke-width="2.6" stroke-linejoin="round"/>
+        </svg>
+        <h1 class="wordmark">Draftion</h1>
+        <p class="tagline">Brawl Stars Ranked Drafting Tool</p>
+        <p class="byline">by Kian Gray</p>
+      </header>
+
+      <section class="panel start-panel">
+        <div class="step">
+          <div class="step-head"><span class="step-no">1</span><span class="step-title">First pick this match</span></div>
+          <div id="first-pick-switch" class="segmented">
+            <button class="seg active" data-team="A">My team</button>
+            <button class="seg" data-team="B">Enemy team</button>
+          </div>
+        </div>
+
+        <div class="step">
+          <div class="step-head"><span class="step-no">2</span><span class="step-title">Map</span><span class="step-opt">optional</span></div>
+          <input id="map-search" class="input" type="text" placeholder="Search maps&hellip;  (Enter = first match)" autocomplete="off" autofocus>
+          <div id="mode-chips" class="chips"></div>
+          <button id="map-scope" class="scope-toggle hidden" type="button"></button>
+          <div id="map-grid" class="map-grid"></div>
+          <p id="map-hint" class="hint hidden"></p>
+        </div>
+
+        <div class="start-actions">
+          <button id="skip-map-btn" class="btn btn-primary">Start without a map &rarr;</button>
+        </div>
+      </section>
+
+      <footer class="home-footer">
+        Draftion is an unofficial fan project. It is not affiliated with, endorsed, sponsored or
+        approved by Supercell, and Supercell is not responsible for it. Brawl Stars and its characters,
+        maps and artwork are the property of Supercell. See Supercell's
+        <a href="https://supercell.com/en/fan-content-policy/" target="_blank" rel="noopener noreferrer">Fan Content Policy</a>.
+      </footer>
+
+    </div>
+  </section>
+
+  <!-- Draft. Whose turn it is comes from the ban/pick sequence served by
+       /rules, so you only ever click a brawler - never "ban or pick, for which
+       team". Once every pick is in, the main area turns into the result view. -->
+  <section id="draft-screen" class="screen draft hidden">
+
+    <div id="demo-banner" class="notice hidden"></div>
+
+    <header class="app-header">
+      <div class="brand">
+        <svg class="brand-mark" viewBox="0 0 28 28" aria-hidden="true">
+          <rect width="28" height="28" rx="6" fill="currentColor"/>
+          <path d="M9 7.5h5.2a6.5 6.5 0 0 1 0 13H9z" fill="none" stroke="#14110a" stroke-width="2.6" stroke-linejoin="round"/>
+        </svg>
+        <span class="brand-name">Draftion</span>
+      </div>
+      <dl class="context">
+        <div class="ctx"><dt>Map</dt><dd id="map-name"></dd></div>
+        <div class="ctx"><dt>First pick</dt><dd id="first-pick-text"></dd></div>
+      </dl>
+      <div class="header-actions">
+        <button id="undo-btn" class="btn" title="Undo the last action (Esc)">Undo <kbd>Esc</kbd></button>
+        <button id="new-draft-btn" class="btn" title="Discard this draft and start a new one">New draft</button>
+      </div>
+    </header>
+
+    <section class="draft-bar">
+      <section id="team-a-block" class="team-block team-a"></section>
+
+      <div class="draft-center">
+        <div id="phase-pill" class="phase-pill">Loading&hellip;</div>
+        <div id="turn-text" class="turn-text"></div>
+      </div>
+
+      <section id="team-b-block" class="team-block team-b"></section>
+    </section>
+
+    <main id="main-grid" class="main-grid">
+      <div class="pool-panel">
+        <div class="pool-head">
+          <input id="brawler-search" class="input" type="text" placeholder="Search brawlers  ( / )" autocomplete="off">
+          <span id="pool-count" class="pool-count"></span>
+        </div>
+        <div id="brawler-grid" class="brawler-grid"></div>
+      </div>
+
+      <aside class="rec-panel">
+        <h2>Recommendations</h2>
+        <p id="rec-subtitle" class="rec-subtitle"></p>
+        <ol id="rec-list" class="rec-list"></ol>
+        <p id="rec-status" class="rec-status"></p>
+      </aside>
+    </main>
+
+    <!-- Result view: replaces the brawler grid + recommendations once the draft is complete -->
+    <section id="result-panel" class="result-panel hidden">
+      <div class="win-card">
+        <div class="win-head">
+          <h2>Estimated win chance</h2>
+          <span class="win-note">Model estimate for this draft &ndash; not a measured winrate</span>
+        </div>
+        <div class="win-labels"><span class="win-team a">Your team</span><span class="win-team b">Enemy team</span></div>
+        <div id="win-bar" class="win-bar">
+          <div class="win-seg a"><span id="win-a-text">&ndash;</span></div>
+          <div class="win-seg b"><span id="win-b-text">&ndash;</span></div>
+        </div>
+        <p id="win-verdict" class="win-verdict"></p>
+      </div>
+      <div id="result-body" class="result-grid"></div>
+      <p id="result-status" class="rec-status"></p>
+    </section>
+
+    <footer class="keyhints">
+      <span><kbd>Enter</kbd> Lock in top pick (or first search match)</span>
+      <span><kbd>Esc</kbd> Undo (clears the search first)</span>
+      <span><kbd>/</kbd> Search</span>
+    </footer>
+  </section>
+
+  <script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,542 @@
+[
+  {
+    "id": 16000027,
+    "name": "8-BIT",
+    "image": "https://cdn.brawlify.com/brawlers/borderless/16000027.png"
+  },
+  {
+    "id": 16000095,
+    "name": "ALLI",
+    "image": "https://cdn.brawlify.com/brawlers/borderless/16000095.png"
+  },
+  {
+    "id": 16000040,
+    "name": "AMBER",
+    "image": "https://cdn.brawlify.com/brawlers/borderless/16000040.png"
+  },
+  {
+    "id": 16000079,
+    "name": "ANGELO",
+    "image": "https://cdn.brawlify.com/brawlers/borderless/16000079.png"
+  },
+  {
+    "id": 16000051,
+    "name": "ASH",
+    "image": "https://cdn.brawlify.com/brawlers/borderless/16000051.png"
+  },
+  {
+    "id": 16000006,
+    "name": "BARLEY",
+    "image": "https://cdn.brawlify.com/brawlers/borderless/16000006.png"
+  },
+  {
+    "id": 16000029,
+    "name": "BEA",
+    "image": "https://cdn.brawlify.com/brawlers/borderless/16000029.png"
+  },
+  {
+    "id": 16000046,
+    "name": "BELLE",
+    "image": "https://cdn.brawlify.com/brawlers/borderless/16000046.png"
+  },
+  {
+    "id": 16000082,
+    "name": "BERRY",
+    "image": "https://cdn.brawlify.com/brawlers/borderless/16000082.png"
+  },
+  {
+    "id": 16000026,
+    "name": "BIBI",
+    "image": "https://cdn.brawlify.com/brawlers/borderless/16000026.png"
+  },
+  {
+    "id": 16000014,
+    "name": "BO",
+    "image": "https://cdn.brawlify.com/brawlers/borderless/16000014.png"
+  },
+  {
+    "id": 16000106,
+    "name": "BOLT",
+    "image": "https://cdn.brawlify.com/brawlers/borderless/16000106.png"
+  },
+  {
+    "id": 16000058,
+    "name": "BONNIE",
+    "image": "https://cdn.brawlify.com/brawlers/borderless/16000058.png"
+  },
+  {
+    "id": 16000003,
+    "name": "BROCK",
+    "image": "https://cdn.brawlify.com/brawlers/borderless/16000003.png"
+  },
+  {
+    "id": 16000002,
+    "name": "BULL",
+    "image": "https://cdn.brawlify.com/brawlers/borderless/16000002.png"
+  },
+  {
+    "id": 16000062,
+    "name": "BUSTER",
+    "image": "https://cdn.brawlify.com/brawlers/borderless/16000062.png"
+  },
+  {
+    "id": 16000049,
+    "name": "BUZZ",
+    "image": "https://cdn.brawlify.com/brawlers/borderless/16000049.png"
+  },
+  {
+    "id": 16000042,
+    "name": "BYRON",
+    "image": "https://cdn.brawlify.com/brawlers/borderless/16000042.png"
+  },
+  {
+    "id": 16000025,
+    "name": "CARL",
+    "image": "https://cdn.brawlify.com/brawlers/borderless/16000025.png"
+  },
+  {
+    "id": 16000074,
+    "name": "CHARLIE",
+    "image": "https://cdn.brawlify.com/brawlers/borderless/16000074.png"
+  },
+  {
+    "id": 16000063,
+    "name": "CHESTER",
+    "image": "https://cdn.brawlify.com/brawlers/borderless/16000063.png"
+  },
+  {
+    "id": 16000073,
+    "name": "CHUCK",
+    "image": "https://cdn.brawlify.com/brawlers/borderless/16000073.png"
+  },
+  {
+    "id": 16000083,
+    "name": "CLANCY",
+    "image": "https://cdn.brawlify.com/brawlers/borderless/16000083.png"
+  },
+  {
+    "id": 16000039,
+    "name": "COLETTE",
+    "image": "https://cdn.brawlify.com/brawlers/borderless/16000039.png"
+  },
+  {
+    "id": 16000001,
+    "name": "COLT",
+    "image": "https://cdn.brawlify.com/brawlers/borderless/16000001.png"
+  },
+  {
+    "id": 16000070,
+    "name": "CORDELIUS",
+    "image": "https://cdn.brawlify.com/brawlers/borderless/16000070.png"
+  },
+  {
+    "id": 16000109,
+    "name": "COSMO",
+    "image": null
+  },
+  {
+    "id": 16000012,
+    "name": "CROW",
+    "image": "https://cdn.brawlify.com/brawlers/borderless/16000012.png"
+  },
+  {
+    "id": 16000104,
+    "name": "DAMIAN",
+    "image": "https://cdn.brawlify.com/brawlers/borderless/16000104.png"
+  },
+  {
+    "id": 16000018,
+    "name": "DARRYL",
+    "image": "https://cdn.brawlify.com/brawlers/borderless/16000018.png"
+  },
+  {
+    "id": 16000071,
+    "name": "DOUG",
+    "image": "https://cdn.brawlify.com/brawlers/borderless/16000071.png"
+  },
+  {
+    "id": 16000080,
+    "name": "DRACO",
+    "image": "https://cdn.brawlify.com/brawlers/borderless/16000080.png"
+  },
+  {
+    "id": 16000009,
+    "name": "DYNAMIKE",
+    "image": "https://cdn.brawlify.com/brawlers/borderless/16000009.png"
+  },
+  {
+    "id": 16000043,
+    "name": "EDGAR",
+    "image": "https://cdn.brawlify.com/brawlers/borderless/16000043.png"
+  },
+  {
+    "id": 16000010,
+    "name": "EL PRIMO",
+    "image": "https://cdn.brawlify.com/brawlers/borderless/16000010.png"
+  },
+  {
+    "id": 16000030,
+    "name": "EMZ",
+    "image": "https://cdn.brawlify.com/brawlers/borderless/16000030.png"
+  },
+  {
+    "id": 16000056,
+    "name": "EVE",
+    "image": "https://cdn.brawlify.com/brawlers/borderless/16000056.png"
+  },
+  {
+    "id": 16000054,
+    "name": "FANG",
+    "image": "https://cdn.brawlify.com/brawlers/borderless/16000054.png"
+  },
+  {
+    "id": 16000092,
+    "name": "FINX",
+    "image": "https://cdn.brawlify.com/brawlers/borderless/16000092.png"
+  },
+  {
+    "id": 16000020,
+    "name": "FRANK",
+    "image": "https://cdn.brawlify.com/brawlers/borderless/16000020.png"
+  },
+  {
+    "id": 16000035,
+    "name": "GALE",
+    "image": "https://cdn.brawlify.com/brawlers/borderless/16000035.png"
+  },
+  {
+    "id": 16000021,
+    "name": "GENE",
+    "image": "https://cdn.brawlify.com/brawlers/borderless/16000021.png"
+  },
+  {
+    "id": 16000100,
+    "name": "GIGI",
+    "image": "https://cdn.brawlify.com/brawlers/borderless/16000100.png"
+  },
+  {
+    "id": 16000101,
+    "name": "GLOWY",
+    "image": "https://cdn.brawlify.com/brawlers/borderless/16000101.png"
+  },
+  {
+    "id": 16000064,
+    "name": "GRAY",
+    "image": "https://cdn.brawlify.com/brawlers/borderless/16000064.png"
+  },
+  {
+    "id": 16000050,
+    "name": "GRIFF",
+    "image": "https://cdn.brawlify.com/brawlers/borderless/16000050.png"
+  },
+  {
+    "id": 16000048,
+    "name": "GROM",
+    "image": "https://cdn.brawlify.com/brawlers/borderless/16000048.png"
+  },
+  {
+    "id": 16000061,
+    "name": "GUS",
+    "image": "https://cdn.brawlify.com/brawlers/borderless/16000061.png"
+  },
+  {
+    "id": 16000069,
+    "name": "HANK",
+    "image": "https://cdn.brawlify.com/brawlers/borderless/16000069.png"
+  },
+  {
+    "id": 16000034,
+    "name": "JACKY",
+    "image": "https://cdn.brawlify.com/brawlers/borderless/16000034.png"
+  },
+  {
+    "id": 16000093,
+    "name": "JAE-YONG",
+    "image": "https://cdn.brawlify.com/brawlers/borderless/16000093.png"
+  },
+  {
+    "id": 16000057,
+    "name": "JANET",
+    "image": "https://cdn.brawlify.com/brawlers/borderless/16000057.png"
+  },
+  {
+    "id": 16000007,
+    "name": "JESSIE",
+    "image": "https://cdn.brawlify.com/brawlers/borderless/16000007.png"
+  },
+  {
+    "id": 16000087,
+    "name": "JUJU",
+    "image": "https://cdn.brawlify.com/brawlers/borderless/16000087.png"
+  },
+  {
+    "id": 16000094,
+    "name": "KAZE",
+    "image": "https://cdn.brawlify.com/brawlers/borderless/16000094.png"
+  },
+  {
+    "id": 16000085,
+    "name": "KENJI",
+    "image": "https://cdn.brawlify.com/brawlers/borderless/16000085.png"
+  },
+  {
+    "id": 16000076,
+    "name": "KIT",
+    "image": "https://cdn.brawlify.com/brawlers/borderless/16000076.png"
+  },
+  {
+    "id": 16000077,
+    "name": "LARRY & LAWRIE",
+    "image": "https://cdn.brawlify.com/brawlers/borderless/16000077.png"
+  },
+  {
+    "id": 16000023,
+    "name": "LEON",
+    "image": "https://cdn.brawlify.com/brawlers/borderless/16000023.png"
+  },
+  {
+    "id": 16000081,
+    "name": "LILY",
+    "image": "https://cdn.brawlify.com/brawlers/borderless/16000081.png"
+  },
+  {
+    "id": 16000053,
+    "name": "LOLA",
+    "image": "https://cdn.brawlify.com/brawlers/borderless/16000053.png"
+  },
+  {
+    "id": 16000041,
+    "name": "LOU",
+    "image": "https://cdn.brawlify.com/brawlers/borderless/16000041.png"
+  },
+  {
+    "id": 16000091,
+    "name": "LUMI",
+    "image": "https://cdn.brawlify.com/brawlers/borderless/16000091.png"
+  },
+  {
+    "id": 16000068,
+    "name": "MAISIE",
+    "image": "https://cdn.brawlify.com/brawlers/borderless/16000068.png"
+  },
+  {
+    "id": 16000065,
+    "name": "MANDY",
+    "image": "https://cdn.brawlify.com/brawlers/borderless/16000065.png"
+  },
+  {
+    "id": 16000032,
+    "name": "MAX",
+    "image": "https://cdn.brawlify.com/brawlers/borderless/16000032.png"
+  },
+  {
+    "id": 16000089,
+    "name": "MEEPLE",
+    "image": "https://cdn.brawlify.com/brawlers/borderless/16000089.png"
+  },
+  {
+    "id": 16000052,
+    "name": "MEG",
+    "image": "https://cdn.brawlify.com/brawlers/borderless/16000052.png"
+  },
+  {
+    "id": 16000078,
+    "name": "MELODIE",
+    "image": "https://cdn.brawlify.com/brawlers/borderless/16000078.png"
+  },
+  {
+    "id": 16000075,
+    "name": "MICO",
+    "image": "https://cdn.brawlify.com/brawlers/borderless/16000075.png"
+  },
+  {
+    "id": 16000097,
+    "name": "MINA",
+    "image": "https://cdn.brawlify.com/brawlers/borderless/16000097.png"
+  },
+  {
+    "id": 16000084,
+    "name": "MOE",
+    "image": "https://cdn.brawlify.com/brawlers/borderless/16000084.png"
+  },
+  {
+    "id": 16000011,
+    "name": "MORTIS",
+    "image": "https://cdn.brawlify.com/brawlers/borderless/16000011.png"
+  },
+  {
+    "id": 16000031,
+    "name": "MR. P",
+    "image": "https://cdn.brawlify.com/brawlers/borderless/16000031.png"
+  },
+  {
+    "id": 16000103,
+    "name": "NAJIA",
+    "image": "https://cdn.brawlify.com/brawlers/borderless/16000103.png"
+  },
+  {
+    "id": 16000036,
+    "name": "NANI",
+    "image": "https://cdn.brawlify.com/brawlers/borderless/16000036.png"
+  },
+  {
+    "id": 16000008,
+    "name": "NITA",
+    "image": "https://cdn.brawlify.com/brawlers/borderless/16000008.png"
+  },
+  {
+    "id": 16000107,
+    "name": "NORI",
+    "image": "https://cdn.brawlify.com/brawlers/borderless/16000107.png"
+  },
+  {
+    "id": 16000090,
+    "name": "OLLIE",
+    "image": "https://cdn.brawlify.com/brawlers/borderless/16000090.png"
+  },
+  {
+    "id": 16000059,
+    "name": "OTIS",
+    "image": "https://cdn.brawlify.com/brawlers/borderless/16000059.png"
+  },
+  {
+    "id": 16000016,
+    "name": "PAM",
+    "image": "https://cdn.brawlify.com/brawlers/borderless/16000016.png"
+  },
+  {
+    "id": 16000072,
+    "name": "PEARL",
+    "image": "https://cdn.brawlify.com/brawlers/borderless/16000072.png"
+  },
+  {
+    "id": 16000019,
+    "name": "PENNY",
+    "image": "https://cdn.brawlify.com/brawlers/borderless/16000019.png"
+  },
+  {
+    "id": 16000099,
+    "name": "PIERCE",
+    "image": "https://cdn.brawlify.com/brawlers/borderless/16000099.png"
+  },
+  {
+    "id": 16000015,
+    "name": "PIPER",
+    "image": "https://cdn.brawlify.com/brawlers/borderless/16000015.png"
+  },
+  {
+    "id": 16000013,
+    "name": "POCO",
+    "image": "https://cdn.brawlify.com/brawlers/borderless/16000013.png"
+  },
+  {
+    "id": 16000066,
+    "name": "R-T",
+    "image": "https://cdn.brawlify.com/brawlers/borderless/16000066.png"
+  },
+  {
+    "id": 16000004,
+    "name": "RICO",
+    "image": "https://cdn.brawlify.com/brawlers/borderless/16000004.png"
+  },
+  {
+    "id": 16000024,
+    "name": "ROSA",
+    "image": "https://cdn.brawlify.com/brawlers/borderless/16000024.png"
+  },
+  {
+    "id": 16000044,
+    "name": "RUFFS",
+    "image": "https://cdn.brawlify.com/brawlers/borderless/16000044.png"
+  },
+  {
+    "id": 16000060,
+    "name": "SAM",
+    "image": "https://cdn.brawlify.com/brawlers/borderless/16000060.png"
+  },
+  {
+    "id": 16000028,
+    "name": "SANDY",
+    "image": "https://cdn.brawlify.com/brawlers/borderless/16000028.png"
+  },
+  {
+    "id": 16000086,
+    "name": "SHADE",
+    "image": "https://cdn.brawlify.com/brawlers/borderless/16000086.png"
+  },
+  {
+    "id": 16000000,
+    "name": "SHELLY",
+    "image": "https://cdn.brawlify.com/brawlers/borderless/16000000.png"
+  },
+  {
+    "id": 16000102,
+    "name": "SIRIUS",
+    "image": "https://cdn.brawlify.com/brawlers/borderless/16000102.png"
+  },
+  {
+    "id": 16000005,
+    "name": "SPIKE",
+    "image": "https://cdn.brawlify.com/brawlers/borderless/16000005.png"
+  },
+  {
+    "id": 16000037,
+    "name": "SPROUT",
+    "image": "https://cdn.brawlify.com/brawlers/borderless/16000037.png"
+  },
+  {
+    "id": 16000047,
+    "name": "SQUEAK",
+    "image": "https://cdn.brawlify.com/brawlers/borderless/16000047.png"
+  },
+  {
+    "id": 16000105,
+    "name": "STARR NOVA",
+    "image": "https://cdn.brawlify.com/brawlers/borderless/16000105.png"
+  },
+  {
+    "id": 16000045,
+    "name": "STU",
+    "image": "https://cdn.brawlify.com/brawlers/borderless/16000045.png"
+  },
+  {
+    "id": 16000038,
+    "name": "SURGE",
+    "image": "https://cdn.brawlify.com/brawlers/borderless/16000038.png"
+  },
+  {
+    "id": 16000017,
+    "name": "TARA",
+    "image": "https://cdn.brawlify.com/brawlers/borderless/16000017.png"
+  },
+  {
+    "id": 16000022,
+    "name": "TICK",
+    "image": "https://cdn.brawlify.com/brawlers/borderless/16000022.png"
+  },
+  {
+    "id": 16000096,
+    "name": "TRUNK",
+    "image": "https://cdn.brawlify.com/brawlers/borderless/16000096.png"
+  },
+  {
+    "id": 16000110,
+    "name": "VINCE",
+    "image": null
+  },
+  {
+    "id": 16000108,
+    "name": "WENDY",
+    "image": "https://cdn.brawlify.com/brawlers/borderless/16000108.png"
+  },
+  {
+    "id": 16000067,
+    "name": "WILLOW",
+    "image": "https://cdn.brawlify.com/brawlers/borderless/16000067.png"
+  },
+  {
+    "id": 16000098,
+    "name": "ZIGGY",
+    "image": "https://cdn.brawlify.com/brawlers/borderless/16000098.png"
+  }
+]
