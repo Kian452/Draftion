@@ -102,7 +102,9 @@ def select_model(s: Settings) -> Selection:
 def confidence(model: Any, s: Settings) -> Optional[str]:
     """How much the UI should trust the model, one word: 'demo' (synthetic data),
     'low' (raw-stats fallback), 'early' (trained, but on fewer than EARLY_MODEL_BATTLES
-    battles - measured to be barely better than a coin flip at ~2.8k), else 'ok'."""
+    battles), else 'ok'. Measured: AUC 0.53-0.54 at ~2.8k battles, 0.58 at ~18k, and
+    the trained model beat the raw stats by only 0.001 log loss there - so the
+    warning stays until the ~40k that a brawler-level model is estimated to need."""
     if model is None:
         return None
     if getattr(model, "data_source", "real") != "real":

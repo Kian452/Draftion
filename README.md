@@ -119,8 +119,8 @@ Badge neben Empfehlungen und Ergebnis; `model_confidence` in `GET /health`):
 |---|---|---|
 | `demo` | Modell auf synthetischen Daten | gelb: "Demo model" - Platzhalter |
 | `low` | zu wenig Daten für ein Modell, das die Rohstatistik schlägt: es antwortet die **Rohstatistik** (`src/baseline.py`, nur Brawler-Winrates, gemessen und geschrumpft) | "Preliminary · low confidence" |
-| `early` | trainiertes Modell auf < 10 000 Kämpfen | "Early model" |
-| `ok` | trainiertes Modell auf ≥ 10 000 Kämpfen | kein Hinweis |
+| `early` | trainiertes Modell auf < 40 000 Kämpfen (`EARLY_MODEL_BATTLES`) | "Early model" |
+| `ok` | trainiertes Modell auf ≥ 40 000 Kämpfen | kein Hinweis |
 
 Welches Modell antwortet, entscheidet `src/model_select.py`: ein echt trainiertes
 Modell mit ≥ `MIN_TRAIN_ROWS` Kämpfen, **das die Rohstatistik in der beim Training
@@ -304,6 +304,22 @@ aus dem Spec korrigiert - deshalb ist die Pipeline jetzt daran ausgerichtet:
   Bedarf: ~100 Brawler mit je ±1 % Winrate-Genauigkeit brauchen ~2 500 Spiele pro Brawler,
   also **etwa 40 000+ Kämpfe** für ein Brawler-Modell und deutlich mehr für Synergien und
   Counter - deshalb muss der Crawler dauerhaft laufen (Railway).
+- **Erste Zahlen von Railway (2026-09-21, 18 151 nutzbare Kämpfe nach dem ersten
+  Crawl-Lauf).** Zurückgehaltene Testdaten (3 631 Kämpfe): AUC 0,581, Log-Loss 0,6835,
+  Brier 0,2452 (Raten: 0,6931 / 0,25). Zeitreihen-CV: Log-Loss 0,6891 gegen 0,6903 für
+  die Rohstatistik - das trainierte Modell gewinnt nur knapp und wird deshalb
+  ausgeliefert. Der Abstand zwischen dem besten und dem siebten Vorschlag beträgt oft
+  nur ~0,6 Prozentpunkte: Ein kleines echtes Signal, aber die Reihenfolge der Top-Picks
+  ist noch Rauschen. Deshalb bleibt der Hinweis "Early model" bis 40 000 Kämpfe. Der
+  Crawler schafft auf Railway ~90 Spieler pro Minute (1 500 Spieler in ~17 Minuten,
+  ~12 nutzbare Kämpfe je Spieler; lokal waren es ~26 pro Minute).
+- **Die Map beeinflusst die Empfehlungen (noch) nicht.** Sie geht nur als eigenes
+  Merkmal `map:<Name>` ein. Da jeder Kampf auch mit vertauschten Seiten trainiert wird,
+  kürzt sich ein seitenunabhängiges Merkmal exakt weg (Koeffizient ~1e-15, auf fünf
+  verschiedenen Maps kommen dieselben Empfehlungen). Damit die Map wirkt, bräuchte es
+  Brawler×Map-Merkmale; bei im Schnitt nur ~40 Einsätzen je (Map, Brawler) sind die
+  sehr verrauscht und müssten sich per CV erst als hilfreich erweisen. Die Map dient
+  bisher nur der Auswahl (aktiver Ranked-Pool aus den Daten).
 - Gefundene und behobene Fehler: `b.map` in `build_training_table` war die
   Pandas-Methode statt der Map (das Modell hat die Map nie benutzt), die
   Trainingstabelle war quadratisch langsam (jetzt linear, 85× schneller bei 2 400

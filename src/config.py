@@ -20,7 +20,7 @@ Model quality (see `python -m src.tune` for how these were measured)
   MIN_TRAIN_ROWS       usable battles needed before a trained model is built or served;
                        below it the raw-stats fallback answers instead      (1000)
   MIN_RAW_BATTLES      battles needed for the raw-stats fallback            (100)
-  EARLY_MODEL_BATTLES  a trained model below this is flagged "early"        (10000)
+  EARLY_MODEL_BATTLES  a trained model below this is flagged "early"        (40000)
   DRAFT_TIME_BUDGET    seconds one /recommend search may take              (1.0)
   MODEL_CHECK_SECONDS  how often the API looks for a newer model version    (30)
 
@@ -82,7 +82,7 @@ class Settings:
             min_rank=int(env("MIN_RANK", "12")),
             min_train_rows=int(env("MIN_TRAIN_ROWS", "1000")),
             min_raw_battles=int(env("MIN_RAW_BATTLES", "100")),
-            early_model_battles=int(env("EARLY_MODEL_BATTLES", "10000")),
+            early_model_battles=int(env("EARLY_MODEL_BATTLES", "40000")),
             draft_time_budget=float(env("DRAFT_TIME_BUDGET", "1.0")),
             model_check_seconds=float(env("MODEL_CHECK_SECONDS", "30")),
             map_window_days=int(env("MAP_WINDOW_DAYS", "7")),

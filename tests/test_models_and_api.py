@@ -197,6 +197,17 @@ class Selection(TempDirCase):
         self.assertEqual(confidence(trained(self.root, n_battles=10_000), s), "ok")
         self.assertIsNone(confidence(None, s))
 
+    def test_the_warning_stays_until_about_40k_battles_by_default(self):
+        # Measured on the first 18,151 real battles: AUC 0.58 and a 0.001 log-loss edge over
+        # the raw stats - a real but small signal, so it must not read as "no warning" yet.
+        env = {k: v for k, v in os.environ.items() if k != "EARLY_MODEL_BATTLES"}
+        with mock.patch.dict(os.environ, env, clear=True):
+            s = Settings.from_env()
+        self.assertEqual(s.early_model_battles, 40_000)
+        self.with_data()
+        self.assertEqual(confidence(trained(self.root, n_battles=18_151), s), "early")
+        self.assertEqual(confidence(trained(self.root, n_battles=40_000), s), "ok")
+
     def test_the_synthetic_demo_model_gives_way_to_real_data_but_not_to_nothing(self):
         self.with_data()
         save_versioned(trained(self.root, "synthetic"), str(self.root / "models"))

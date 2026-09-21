@@ -143,7 +143,8 @@ function getTurn() {
 // How far to trust the numbers is decided by the backend (/health model_confidence,
 // see src/model_select.py): demo = synthetic data, low = raw brawler win rates only
 // (not enough data for a trained model yet), early = a trained model on fewer than
-// ~10,000 battles (measured: barely better than a coin flip at ~2.8k), ok = no warning.
+// ~40,000 battles (measured: AUC 0.58 at ~18k, only a small edge over a coin flip),
+// ok = no warning.
 const CONFIDENCE_TAG = {
   demo: "Demo data",
   low: "Preliminary · low confidence",
@@ -157,9 +158,9 @@ function modelNotice(health) {
     case "demo":
       return "<strong>Demo model.</strong> The recommendations come from a model trained on synthetic data, not real matches, so they are illustrative. The real-data pipeline (crawler → training → evaluation) is part of the project – see the README.";
     case "low":
-      return `<strong>Preliminary – low confidence.</strong> Based only on raw brawler win rates from ${n} real battles, with no counter or synergy modelling yet. Expect win chances close to 50%; a trained model takes over once enough battles are collected.`;
+      return `<strong>Preliminary – low confidence.</strong> Based only on raw brawler win rates from ${n} real battles, with no counter, synergy or map modelling yet. Expect win chances close to 50%; a trained model takes over once enough battles are collected.`;
     case "early":
-      return `<strong>Early model.</strong> Trained on ${n} real battles – recommendations are still very noisy and improve as more data is collected.`;
+      return `<strong>Early model.</strong> Trained on ${n} real battles – the edge over a coin flip is still small, so the order of the top recommendations is noisy, and the map does not influence the numbers yet. It improves as more data is collected.`;
     default:
       return "";
   }
